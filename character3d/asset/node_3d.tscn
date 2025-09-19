@@ -22,7 +22,7 @@ sky_rotation = Vector3(0, -1.59872, 0)
 script = ExtResource("1_be0f1")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.991263, -0.00619595, -0.131755, 0.0579015, 0.917947, 0.392456, 0.118513, -0.396656, 0.910285, 5.68021, 39.2522, 61.3714)
+transform = Transform3D(0.991263, -0.00619575, -0.131756, 0.0579015, 0.917947, 0.392456, 0.118513, -0.396656, 0.910285, 14.7567, 19.5541, 36.5611)
 environment = SubResource("Environment_bm0wf")
 fov = 80.0
 far = 3998.0
