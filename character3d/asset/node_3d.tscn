@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://deqxwusu5uid1"]
+
+[ext_resource type="Script" uid="uid://whor3ej5pjgb" path="res://asset/node_3d.gd" id="1_be0f1"]
+[ext_resource type="PackedScene" uid="uid://b2cmtral264vl" path="res://asset/Mutant Walking.tscn" id="2_be0f1"]
+[ext_resource type="Texture2D" uid="uid://bqcpa6jfov7hc" path="res://asset/image_1729826349448502519.jpg" id="2_jc768"]
+[ext_resource type="PackedScene" uid="uid://b4n34wnd3c8ya" path="res://asset/Winter Forest.tscn" id="3_bm0wf"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_7yun0"]
+panorama = ExtResource("2_jc768")
+energy_multiplier = 0.7
+
+[sub_resource type="Sky" id="Sky_vamhd"]
+sky_material = SubResource("PanoramaSkyMaterial_7yun0")
+
+[sub_resource type="Environment" id="Environment_bm0wf"]
+background_mode = 2
+background_color = Color(0.396078, 0.627451, 0.639216, 1)
+sky = SubResource("Sky_vamhd")
+sky_rotation = Vector3(0, -1.59872, 0)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_be0f1")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.991263, -0.00619595, -0.131755, 0.0579015, 0.917947, 0.392456, 0.118513, -0.396656, 0.910285, 5.68021, 39.2522, 61.3714)
+environment = SubResource("Environment_bm0wf")
+fov = 80.0
+far = 3998.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5798, 55.6361, 13.256)
+light_energy = 0.678
+shadow_enabled = true
+shadow_normal_bias = 0.0
+
+[node name="Mutant Walking" parent="." instance=ExtResource("2_be0f1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3089, 0, 0)
+
+[node name="Mutant Walking2" parent="." instance=ExtResource("2_be0f1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.84768, 0, 0)
+
+[node name="Mutant Walking3" parent="." instance=ExtResource("2_be0f1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.8955, 0, 0)
+
+[node name="Mutant Walking4" parent="." instance=ExtResource("2_be0f1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.5696, 0.996555, 3.0364)
+
+[node name="Winter Forest" parent="." instance=ExtResource("3_bm0wf")]
+transform = Transform3D(-399.931, 0, -7.44861, 0, 400, 0, 7.44861, 0, -399.931, 25.5565, 11.8255, -36.0722)
